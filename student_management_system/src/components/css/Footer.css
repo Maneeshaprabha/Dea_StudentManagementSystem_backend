@@ -1,0 +1,10 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px; /* Adjust according to footer height */
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 50px; /* Center content vertically */
+  }

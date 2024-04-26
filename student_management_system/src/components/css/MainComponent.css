@@ -1,0 +1,64 @@
+/* MainComponent.css */
+
+/* Main container styles */
+.main-container {
+    /* Center the content both horizontally and vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    
+    /* Add a background image */
+    background-image: url('/src/components/images/pexels-buro-millennial-636760-1438072.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps background fixed during scroll */
+    
+    /* Add a dark overlay for better text contrast */
+    position: relative;
+    z-index: 0;
+}
+
+.main-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay with 40% opacity */
+    z-index: -1; /* Ensure the overlay is behind content */
+}
+
+/* Error message (h1) styles */
+.error-message {
+    color: white; /* White text color for better contrast */
+    font-size: 2.5rem; /* Larger font size for emphasis */
+    font-weight: bold; /* Bold font weight for strong presence */
+    margin-bottom: 20px; /* Space below the heading */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Link styles */
+.link {
+    display: block;
+    margin: 10px 0; /* Spacing between links */
+    
+    /* Soft color palette */
+    color: #3498db; /* Blue color */
+    border: 1px solid #3498db; /* Border matching the link color */
+    padding: 8px 16px; /* Padding around the link text */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove default underline */
+    font-weight: 500; /* Semi-bold font weight */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.link:hover {
+    background-color: #3498db; /* Same color as border for consistency */
+    color: white; /* White text color for better visibility */
+    transform: scale(1.05); /* Slight scaling effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
